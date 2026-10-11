@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng ký tài khoản</title>
+  <style>
+    *{box-sizing:border-box} body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(135deg,#e8f4ff,#f5f7fb);color:#1f2937}
+    .card{width:100%;max-width:440px;padding:32px;background:#fff;border-radius:18px;box-shadow:0 16px 45px #0f172a1f}
+    .logo{width:56px;height:56px;display:grid;place-items:center;margin:0 auto 16px;border-radius:15px;background:#dcfce7;color:#15803d;font-size:24px;font-weight:bold}
+    h1{text-align:center;margin:0;font-size:26px}.sub{text-align:center;color:#64748b;font-size:14px;line-height:1.5;margin:10px 0 24px}
+    .field{margin-bottom:16px}label{display:block;margin-bottom:7px;font-size:14px;font-weight:600}
+    input{width:100%;padding:12px 13px;border:1px solid #cbd5e1;border-radius:9px;font-size:15px;outline:none}
+    input:focus{border-color:#16a34a;box-shadow:0 0 0 3px #16a34a20}
+    .terms{display:flex;gap:8px;align-items:flex-start;font-size:13px;color:#475569;margin:4px 0 20px}.terms input{width:auto;margin-top:2px}
+    button{width:100%;padding:13px;border:0;border-radius:9px;background:#15803d;color:white;font-size:16px;font-weight:bold;cursor:pointer}button:hover{background:#166534}
+    .message{display:none;text-align:center;font-size:14px;line-height:1.5;margin:15px 0 0}.bottom{text-align:center;font-size:14px;color:#64748b;margin-top:22px}.bottom a{color:#0369a1;text-decoration:none}
+    @media(max-width:480px){.card{padding:25px 21px}}
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="logo" aria-hidden="true">ĐK</div>
+    <h1>Tạo tài khoản</h1>
+    <p class="sub">Điền thông tin bên dưới để đăng ký tài khoản mới.</p>
+    <form id="registerForm">
+      <div class="field"><label for="fullname">Họ và tên</label><input id="fullname" name="fullname" type="text" placeholder="Nhập họ và tên" autocomplete="name" required></div>
+      <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="name@example.com" autocomplete="email" required></div>
+      <div class="field"><label for="username">Tên đăng nhập</label><input id="username" name="username" type="text" placeholder="Tạo tên đăng nhập" autocomplete="username" minlength="3" required></div>
+      <div class="field"><label for="password">Mật khẩu</label><input id="password" name="password" type="password" placeholder="Ít nhất 8 ký tự" autocomplete="new-password" minlength="8" required></div>
+      <div class="field"><label for="confirmPassword">Xác nhận mật khẩu</label><input id="confirmPassword" name="confirmPassword" type="password" placeholder="Nhập lại mật khẩu" autocomplete="new-password" minlength="8" required></div>
+      <label class="terms"><input id="agree" type="checkbox" required><span>Tôi đồng ý với các điều khoản sử dụng.</span></label>
+      <button type="submit">Đăng ký</button>
+      <p class="message" id="message" role="status"></p>
+    </form>
+    <div class="bottom">Đã có tài khoản? <a href="Login.html">Đăng nhập</a></div>
+  </main>
+  <script>
+    // Giao diện mẫu: chưa gửi dữ liệu tới máy chủ.
+    document.getElementById('registerForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const message = document.getElementById('message');
+      message.style.display = 'block';
+      if(document.getElementById('password').value !== document.getElementById('confirmPassword').value){
+        message.style.color = '#b91c1c';
+        message.textContent = 'Mật khẩu xác nhận không khớp. Vui lòng kiểm tra lại.';
+        return;
+      }
+      message.style.color = '#b45309';
+      message.textContent = 'Thông tin hợp lệ ở phía trình duyệt. Cần kết nối API để tạo tài khoản thực tế.';
+    });
+  </script>
+</body>
+</html>

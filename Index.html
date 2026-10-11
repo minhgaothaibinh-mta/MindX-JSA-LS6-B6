@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang chủ</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#0f172a;background:#f8fafc}
+    header{background:#fff;border-bottom:1px solid #e2e8f0}.nav{max-width:1100px;margin:auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:18px}.mark{display:grid;place-items:center;width:38px;height:38px;border-radius:11px;background:#0369a1;color:white}
+    nav{display:flex;align-items:center;gap:18px;flex-wrap:wrap}nav a{color:#475569;text-decoration:none;font-size:14px}nav a:hover{color:#0369a1}
+    .actions{display:flex;gap:10px}.btn{display:inline-block;padding:10px 15px;border-radius:9px;text-decoration:none;font-size:14px;font-weight:700}.outline{border:1px solid #cbd5e1;color:#334155}.primary{background:#0369a1;color:#fff}
+    .hero{padding:78px 24px 72px;background:linear-gradient(135deg,#e0f2fe,#f8fafc)}.hero-inner{max-width:1100px;margin:auto;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+    .eyebrow{color:#0369a1;font-size:13px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase}.hero h1{font-size:clamp(34px,5vw,54px);line-height:1.1;margin:16px 0}.hero p{max-width:590px;color:#475569;font-size:17px;line-height:1.7}.hero .actions{margin-top:26px}
+    .visual{min-height:270px;padding:25px;border:1px solid #ffffffb0;border-radius:22px;background:#ffffffb8;box-shadow:0 20px 50px #0f172a12;display:flex;flex-direction:column;justify-content:center;gap:14px}
+    .mini-card{display:flex;align-items:center;gap:14px;padding:16px;border:1px solid #e2e8f0;border-radius:14px;background:#fff}.icon{width:42px;height:42px;display:grid;place-items:center;border-radius:12px;background:#e0f2fe;color:#0369a1;font-size:20px}.mini-card strong{display:block;margin-bottom:4px}.mini-card span{font-size:13px;color:#64748b}
+    .features{max-width:1100px;margin:auto;padding:58px 24px 70px}.features h2{text-align:center;font-size:30px;margin:0 0 12px}.lead{text-align:center;color:#64748b;margin:0 auto 32px;max-width:600px;line-height:1.6}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.feature{padding:24px;border:1px solid #e2e8f0;border-radius:16px;background:#fff}.feature h3{margin:16px 0 8px;font-size:18px}.feature p{color:#64748b;line-height:1.6;font-size:14px;margin:0}
+    footer{padding:22px 24px;text-align:center;border-top:1px solid #e2e8f0;color:#64748b;font-size:13px;background:#fff}
+    @media(max-width:760px){.nav{flex-wrap:wrap}.nav nav{order:3;width:100%}.hero-inner{grid-template-columns:1fr}.hero{padding-top:50px}.grid{grid-template-columns:1fr}.visual{min-height:auto}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="brand"><span class="mark">HT</span><span>Hệ thống của bạn</span></div>
+      <nav aria-label="Điều hướng chính"><a href="home.html">Trang chủ</a><a href="#features">Tính năng</a><a href="#about">Giới thiệu</a></nav>
+      <div class="actions"><a class="btn outline" href="Login.html">Đăng nhập</a><a class="btn primary" href="Register.html">Đăng ký</a></div>
+    </div>
+  </header>
+  <main>
+    <section class="hero" id="about">
+      <div class="hero-inner">
+        <div>
+          <div class="eyebrow">Đơn giản · Hiện đại · Hiệu quả</div>
+          <h1>Chào mừng bạn đến với hệ thống</h1>
+          <p>Một không gian làm việc trực quan, giúp bạn bắt đầu nhanh chóng và quản lý công việc thuận tiện hơn.</p>
+          <div class="actions"><a class="btn primary" href="Register.html">Bắt đầu ngay</a><a class="btn outline" href="#features">Khám phá tính năng</a></div>
+        </div>
+        <div class="visual" aria-label="Minh họa các tính năng">
+          <div class="mini-card"><div class="icon">✓</div><div><strong>Dễ dàng sử dụng</strong><span>Giao diện rõ ràng, thân thiện</span></div></div>
+          <div class="mini-card"><div class="icon">▦</div><div><strong>Quản lý tập trung</strong><span>Thông tin được trình bày mạch lạc</span></div></div>
+          <div class="mini-card"><div class="icon">↗</div><div><strong>Làm việc linh hoạt</strong><span>Tương thích máy tính và điện thoại</span></div></div>
+        </div>
+      </div>
+    </section>
+    <section class="features" id="features">
+      <h2>Các điểm nổi bật</h2>
+      <p class="lead">Bắt đầu với các chức năng cơ bản và có thể mở rộng theo nhu cầu dự án.</p>
+      <div class="grid">
+        <article class="feature"><div class="icon">⚡</div><h3>Thao tác nhanh</h3><p>Bố cục gọn gàng giúp người dùng dễ tìm thấy các mục cần thiết.</p></article>
+        <article class="feature"><div class="icon">🔒</div><h3>Hướng tới an toàn</h3><p>Có thể tích hợp xác thực tài khoản và phân quyền ở phía máy chủ.</p></article>
+        <article class="feature"><div class="icon">📱</div><h3>Thiết kế responsive</h3><p>Tự điều chỉnh bố cục để hiển thị phù hợp trên nhiều kích thước màn hình.</p></article>
+      </div>
+    </section>
+  </main>
+  <footer>© 2026 Hệ thống của bạn. All rights reserved.</footer>
+</body>
+</html>
